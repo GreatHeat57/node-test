@@ -33,12 +33,16 @@ Before starting, ensure you have the following installed:
 
 1. Clone the Repository
 
-    `git clone <repository_url><br>
-    cd graphql-sequelize-api`
+  ```bash
+  $ git clone <repository_url>
+  $ cd restaurant-menu-api
+  ```
 
 2. Install Dependencies
 
-    `npm install`
+  ```
+  npm install
+  ```
 
 3. Configure the Database
 
@@ -46,12 +50,16 @@ Edit the config/config.json file to set up your MySQL database credentials:
 
 4. Run Migrations and Seed Data
 
-    `npx sequelize-cli db:migrate<br>
-    npx sequelize-cli db:seed:all`
+  ```bash
+  $ npx sequelize-cli db:migrate
+  $ npx sequelize-cli db:seed:all
+  ```
 
 5. Start the Server
 
-    `npm start`
+  ```
+  npm start
+  ```
 
 The server will start at http://localhost:4000/graphql.
 
@@ -62,67 +70,67 @@ The server will start at http://localhost:4000/graphql.
 
 - Fetch All Menus
 
-`
-query {
-  menus {
-    id
-    name
-    type
-    price
+  ```bash
+  query {
+    menus {
+      id
+      name
+      type
+      price
+    }
   }
-}
-`
+  ```
 
 - Fetch a Menu by ID
 
-`
-query {
-  menu(id: 1) {
-    id
-    name
-    type
-    price
+  ```bash
+  query {
+    menu(id: 1) {
+      id
+      name
+      type
+      price
+    }
   }
-}
-`
+  ```
 
 ### Mutations
 
 - Add a New Menu
 
-`
-mutation {
-  addMenu(name: "Iceberg Wedge Salad with House Cured Bacon – tomato salsa gorgonzola", type: "appetizers", price: 7.5) {
-    id
-    name
-    type
-    price
+  ```bash
+  mutation {
+    addMenu(name: "Iceberg Wedge Salad with House Cured Bacon – tomato salsa gorgonzola", type: "appetizers", price: 7.5) {
+      id
+      name
+      type
+      price
+    }
   }
-}
-`
+  ```
 
 - Update a Menu
 
-`
-mutation {
-  updateMenu(id: 1, name: "Iceberg Wedge Salad with House Cured Bacon – tomato salsa gorgonzola", type: "appetizers", price: 7.5) {
-    id
-    name
-    type
-    price
+  ```bash
+  mutation {
+    updateMenu(id: 1, name: "Iceberg Wedge Salad with House Cured Bacon – tomato salsa gorgonzola", type: "appetizers", price: 7.5) {
+      id
+      name
+      type
+      price
+    }
   }
-}
-`
+  ```
 
 - Delete a Menu
 
-`
-mutation {
-  deleteMenu(id: 1) {
-    id
+  ```bash
+  mutation {
+    deleteMenu(id: 1) {
+      id
+    }
   }
-}
-`
+  ```
 
 
 ## Testing
@@ -131,4 +139,6 @@ Run Tests
 
 Jest is used for unit testing, and Supertest is used for API testing.
 
+```
 npm test
+```
