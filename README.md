@@ -33,12 +33,12 @@ Before starting, ensure you have the following installed:
 
 1. Clone the Repository
 
-git clone <repository_url>
-cd graphql-sequelize-api
+    `git clone <repository_url><br>
+    cd graphql-sequelize-api`
 
 2. Install Dependencies
 
-npm install
+    `npm install`
 
 3. Configure the Database
 
@@ -46,12 +46,12 @@ Edit the config/config.json file to set up your MySQL database credentials:
 
 4. Run Migrations and Seed Data
 
-npx sequelize-cli db:migrate
-npx sequelize-cli db:seed:all
+    `npx sequelize-cli db:migrate<br>
+    npx sequelize-cli db:seed:all`
 
 5. Start the Server
 
-npm start
+    `npm start`
 
 The server will start at http://localhost:4000/graphql.
 
