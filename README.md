@@ -44,11 +44,22 @@ Before starting, ensure you have the following installed:
   npm install
   ```
 
-3. Configure the Database
+3. Configure Environment Variables
 
-Edit the config/config.json file to set up your MySQL database credentials:
+  Copy the .env.example file, rename to .env and edit the content to set up your MySQL database credentials:
 
-4. Run Migrations and Seed Data
+  ```bash
+  PORT=4000
+  DB_USERNAME=root
+  DB_PASSWORD=
+  DB_HOST=127.0.0.1
+  DB_DIALECT=mysql
+  DB_NAME=restaurant_menu
+  TEST_DB_NAME=restaurant_menu_test
+  PROD_DB_NAME=restaurant_menu_production
+  ```
+
+4. Create database (restaurant_menu and restaurant_menu_test) in local MySQL and run Migrations and Seed Data
 
   ```bash
   $ npx sequelize-cli db:migrate
