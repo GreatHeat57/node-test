@@ -1,9 +1,14 @@
 # Restaurant Menu API
 
-API to provide data to a restaurant menu application. This API should use nodeJS and GraphGL
+Node project to provide data to a restaurant menu application.
 
 
 ## Features
+
+Provide Apis to get all menus, get a menu by id, add new menu, update a menu by id and delete a menu.
+
+
+## Technical Skills
 
 - GraphQL API with Query and Mutation support
 
@@ -51,7 +56,7 @@ Before starting, ensure you have the following installed:
   ```bash
   PORT=4000
   DB_USERNAME=root
-  DB_PASSWORD=
+  DB_PASSWORD=<your_password>
   DB_HOST=127.0.0.1
   DB_DIALECT=mysql
   DB_NAME=restaurant_menu
@@ -147,8 +152,6 @@ The server will start at http://localhost:4000/graphql.
 ## Testing
 
 Run Tests
-
-Jest is used for unit testing, and Supertest is used for API testing.
 
 ```
 npm test
